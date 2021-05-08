@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import View from "./Components/View";
 
 function App() {
   return (
     <div className="App">
-      <p>Just wait.</p>
+    <View/>
     </div>
   );
 }
