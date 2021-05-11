@@ -18,7 +18,6 @@ export default function View(props){
 
 //Big plans ahead ;)
 
-//delayed updates
 //color picker
 //border
 //border radius
@@ -29,3 +28,4 @@ export default function View(props){
 //save and name style settings
 //style settings don't reset when one is deleted
 //remove style when deleted
+//better dropdown (internally scrollable)
