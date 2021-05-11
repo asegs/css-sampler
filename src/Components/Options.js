@@ -4,7 +4,7 @@
 
 //tilde index replaced with that type value
 
-import GetList from "./LongLists";
+import GetList from "./Constants";
 
 function Style(value, selectors){
     this.value = value;
@@ -40,13 +40,13 @@ const lengthPercentSelector = new Selector("Length slider in %",[1],"~0%",[[0,10
 const lengthPickerSelector = new Selector("Length selector",[0],"~0",[GetList('sizes')],["Length:"]);
 
 const paddingPxSelector = new Selector("Padding selector in px",[1,1,1,1],"~0px ~1px ~2px ~3px",[paddingRanges,paddingRanges,paddingRanges,paddingRanges],["Top:","Right:","Bottom:","Left:"]);
-const paddingPercentSelector = new Selector("Padding selector in px",[1,1,1,1],"~0% ~1% ~2% ~3%",[paddingRanges,paddingRanges,paddingRanges,paddingRanges],["Top:","Right:","Bottom:","Left:"]);
+const paddingPercentSelector = new Selector("Padding selector in %",[1,1,1,1],"~0% ~1% ~2% ~3%",[paddingRanges,paddingRanges,paddingRanges,paddingRanges],["Top:","Right:","Bottom:","Left:"]);
 
 const backgroundColorWheelSelector = new Selector("Background color wheel",[2],"#~0",[[]],["Background color"]);
 const backgroundColorPickerSelector = new Selector("Background color name dropdown",[0],"~0",[GetList('colorNames')],["Background color:"]);
 
 
-const options = {
+export const options = {
     'Color': new Style('color',[colorWheelSelector,colorPickerSelector]),
     'Font size': new Style('font-size',[fontSizePxSelector,fontSizePercentSelector,fontSizePickerSelector]),
     'Font': new Style('font-family',[fontFamilySelector]),

@@ -1,23 +1,31 @@
-import React,{Component} from 'react';
+import React,{useState} from 'react';
 import Controls from "./Controls";
 
-class View extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            'style':{}
-        }
+export default function View(props){
+    const [style,setStyle] = useState({});
+    const updateStyle=(value,newStyle)=>{
+        let oldStyles = {...style};
+        oldStyles[value] = newStyle;
+        setStyle(oldStyles);
     }
-
-    render() {
-        return(
-            <div>
-                <p style={this.state.style}>Hello, world!</p>
-                <Controls/>
-            </div>
-        )
-    }
-
+    return(
+        <div>
+            <p style={style}>Hello,world!</p>
+            <Controls setStyle={updateStyle}/>
+        </div>
+    )
 }
 
-export default View;
+//Big plans ahead ;)
+
+//delayed updates
+//color picker
+//border
+//border radius
+//select view type (button, paragraph...etc.)
+//set view text
+//UI padding
+//export CSS
+//save and name style settings
+//style settings don't reset when one is deleted
+//remove style when deleted
