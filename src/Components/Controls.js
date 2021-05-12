@@ -31,7 +31,7 @@ export default function Controls(props) {
         <div>
             {styles.map((style, index) => {
                 return (
-                    <div>
+                    <div className={"Padded-light"}>
                         <StyleRow idx={style.index} edit={editStyleInfo} setStyle={props.setStyle} deleteStyle={deleteStyle}/>
                         <br/>
                     </div>

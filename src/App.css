@@ -29,7 +29,11 @@
 }
 
 .Padded-mid {
-  padding: 30px;
+  padding: 15px;
+}
+
+.Padded-light {
+  padding: 10px;
 }
 
 @keyframes App-logo-spin {

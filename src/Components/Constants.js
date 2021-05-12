@@ -41,6 +41,25 @@ const lists = {
         'initial',
         'inherit'
     ],
+    'borderWidths':[
+        'thin',
+        'medium',
+        'thick'
+    ],
+    'borderStyles':[
+        'none',
+        'solid',
+        'hidden',
+        'dotted',
+        'dashed',
+        'double',
+        'groove',
+        'ridge',
+        'inset',
+        'outset',
+        'initial',
+        'inherit'
+    ],
     'colorNames': [
         'AliceBlue',
         'Amethyst',
@@ -178,6 +197,7 @@ const lists = {
         'Teal',
         'Thistle',
         'Tomato',
+        'Transparent',
         'Turquoise',
         'Violet',
         'Wheat',

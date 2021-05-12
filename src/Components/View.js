@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import Controls from "./Controls";
-import Select from "./Select";
+import SelectDropdown from "./SelectDropdown";
 
 export default function View(props){
     const [style,setStyle] = useState({});
@@ -10,6 +10,7 @@ export default function View(props){
         let oldStyles = {...style};
         oldStyles[value] = newStyle;
         setStyle(oldStyles);
+        console.log(oldStyles)
     }
 
     const removeStyle=(value)=>{
@@ -23,7 +24,7 @@ export default function View(props){
 
     return(
         <div>
-            <Select options={["Paragraph","Header","Button"]} update={setDisplay}/>
+            <SelectDropdown options={["Paragraph","Header","Button"]} update={setDisplay}/>
             {display === "Paragraph" ? <p style={style}>Hello, world!</p> : display === "Header" ? <h1 style={style}>Hello, world!</h1> : <button style={style}>Hello, world!</button> }
             <Controls setStyle={updateStyle} deleteStyle={removeStyle}/>
         </div>
@@ -32,17 +33,17 @@ export default function View(props){
 
 // Big plans ahead ;)
 //
-// border
-// border radius
 // set view text
 // UI padding
 // export CSS
 // save and name style settings
 // style settings don't reset when one is deleted
 // better style removing when deleted
-// better dropdown (internally scrollable)
 // autoformat style names between react camelcase and css hyphens
 // more options for view type beyond p,h1,button
+// probably should allow toggle between dropdown and slider for some
+// hide whole color box
+// dropdown reset when reloaded
 //
 // technical debt:
 //

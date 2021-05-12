@@ -1,6 +1,6 @@
 import {Button} from "reactstrap";
 import React,{useState} from "react";
-import Select from "./Select";
+import SelectDropdown from "./SelectDropdown";
 import {options} from "./Options";
 import Selector from "./Selector";
 
@@ -28,9 +28,8 @@ export default function StyleRow(props){
         return (
             <div>
                 <Button color={"primary"} onClick={()=>setShowing(!showing)}>{styleName!== "" ? styleName+" v" : "Hide v"}</Button>
-                <Select options={Object.keys(options)} update={updateStyle}/>
                 {'selectors' in style ?
-                    <Select options={style.selectors.map(x => x.name)} update={updateSelector}/> : ""}
+                    <SelectDropdown options={style.selectors.map(x => x.name)} update={updateSelector}/> : <SelectDropdown options={Object.keys(options)} update={updateStyle}/>}
                 {'name' in selector ?
                     <Selector selector={selector} setStyle={props.setStyle} value={style.value}/> : ""}
                 <Button onClick={() => props.deleteStyle(props.idx, style.value)}>x</Button>
