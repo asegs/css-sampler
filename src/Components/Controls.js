@@ -5,10 +5,11 @@ import StyleRow from "./StyleRow";
 export default function Controls(props) {
     const [styles, setStyles] = useState([]);
 
-    function removeStyle(index) {
+    function deleteStyle(index,value) {
         let newStyles = [...styles];
         newStyles.splice(index, 1);
         setStyles(newStyles);
+        props.deleteStyle(value)
     }
 
     const addStyle = () => {
@@ -31,8 +32,7 @@ export default function Controls(props) {
             {styles.map((style, index) => {
                 return (
                     <div>
-                        <StyleRow idx={style.index} edit={editStyleInfo} setStyle={props.setStyle}/>
-                        <Button onClick={() => removeStyle(index)}>x</Button>
+                        <StyleRow idx={style.index} edit={editStyleInfo} setStyle={props.setStyle} deleteStyle={deleteStyle}/>
                         <br/>
                     </div>
                 );

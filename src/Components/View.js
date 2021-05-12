@@ -12,33 +12,40 @@ export default function View(props){
         setStyle(oldStyles);
     }
 
+    const removeStyle=(value)=>{
+        console.log(value)
+        let oldStyles = {...style};
+        console.log(oldStyles)
+        delete oldStyles[value];
+        console.log(oldStyles)
+        setStyle(oldStyles);
+    }
 
     return(
         <div>
             <Select options={["Paragraph","Header","Button"]} update={setDisplay}/>
             {display === "Paragraph" ? <p style={style}>Hello, world!</p> : display === "Header" ? <h1 style={style}>Hello, world!</h1> : <button style={style}>Hello, world!</button> }
-            <Controls setStyle={updateStyle}/>
+            <Controls setStyle={updateStyle} deleteStyle={removeStyle}/>
         </div>
     )
 }
 
-//Big plans ahead ;)
-
-//border
-//border radius
-//select view type (button, paragraph...etc.)
-//set view text
-//UI padding
-//export CSS
-//save and name style settings
-//style settings don't reset when one is deleted
-//remove style when deleted
-//better dropdown (internally scrollable)
-//hide style settings when not in use
-//autoformat style names between react camelcase and css hyphens
-
-
-//technical debt:
-
-//janky positioning of color picker
-//style data not all stored in main class, only in fragments
+// Big plans ahead ;)
+//
+// border
+// border radius
+// set view text
+// UI padding
+// export CSS
+// save and name style settings
+// style settings don't reset when one is deleted
+// better style removing when deleted
+// better dropdown (internally scrollable)
+// autoformat style names between react camelcase and css hyphens
+// more options for view type beyond p,h1,button
+//
+// technical debt:
+//
+// janky positioning of color picker
+// style data not all stored in main class, only in fragments
+// general poor padding for UI
