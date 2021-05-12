@@ -22,7 +22,7 @@ function Selector(name,types,format,data,labels){
 const paddingRanges = [0,300,1,0]
 
 
-const colorWheelSelector = new Selector("Color wheel picker",[2],"#~0",[[]],["Color:"]);
+const colorWheelSelector = new Selector("Color wheel picker",[2],"~0",[[]],["Color:"]);
 const colorPickerSelector = new Selector("Color name dropdown",[0],"~0",[GetList('colorNames')],["Color:"]);
 
 const fontSizePxSelector = new Selector("Font size slider in px",[1],"~0px",[[0,144,0.5,14]],["Font size"]);
@@ -42,7 +42,7 @@ const lengthPickerSelector = new Selector("Length selector",[0],"~0",[GetList('s
 const paddingPxSelector = new Selector("Padding selector in px",[1,1,1,1],"~0px ~1px ~2px ~3px",[paddingRanges,paddingRanges,paddingRanges,paddingRanges],["Top:","Right:","Bottom:","Left:"]);
 const paddingPercentSelector = new Selector("Padding selector in %",[1,1,1,1],"~0% ~1% ~2% ~3%",[paddingRanges,paddingRanges,paddingRanges,paddingRanges],["Top:","Right:","Bottom:","Left:"]);
 
-const backgroundColorWheelSelector = new Selector("Background color wheel",[2],"#~0",[[]],["Background color"]);
+const backgroundColorWheelSelector = new Selector("Background color wheel",[2],"~0",[[]],["Background color"]);
 const backgroundColorPickerSelector = new Selector("Background color name dropdown",[0],"~0",[GetList('colorNames')],["Background color:"]);
 
 

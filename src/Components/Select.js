@@ -16,6 +16,7 @@ const Select = (props) => {
         options = props.options.map(x=><DropdownItem onClick={()=>{props.update(x,props.idx);setSelected(x)}}>{x}</DropdownItem>);
     }
     return (
+        <div className={"Padded-mid"}>
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
             <DropdownToggle caret>
                 {selected === "" ? "Choose an option:" : selected}
@@ -24,6 +25,7 @@ const Select = (props) => {
                 {options}
             </DropdownMenu>
         </Dropdown>
+        </div>
     );
 }
 

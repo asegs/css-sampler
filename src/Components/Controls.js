@@ -33,6 +33,7 @@ export default function Controls(props) {
                     <div>
                         <StyleRow idx={style.index} edit={editStyleInfo} setStyle={props.setStyle}/>
                         <Button onClick={() => removeStyle(index)}>x</Button>
+                        <br/>
                     </div>
                 );
             })}
