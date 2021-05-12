@@ -1,6 +1,7 @@
 The goal of this project is to provide a responsive webapp for creating CSS styles.
 Major goals include:
 
+
 -Allowing users to see a specified HTML element with different styles applied
 
 -Allowing users to create styles without writing any CSS
@@ -8,6 +9,11 @@ Major goals include:
 -Allowing users to save CSS styles (by name) from the browser
 
 -A comfortable interface for doing all of this
+
+
+
+
+
 
 The current (very informal) to-do list is below:
 
